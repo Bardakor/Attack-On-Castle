@@ -19,7 +19,7 @@ public class Turret : MonoBehaviour
     //search the nearest target 
     void UpdateTarget()
     {
-        GameObject[] enemies = GameObject.FindGameObjectWithTag();
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
         foreach (GameObject enemy in enemies)
@@ -52,7 +52,7 @@ public class Turret : MonoBehaviour
 
         //Target lock on 
         Vector3 dir = target.position - transform.position;
-        Quaternion lookRotation = Quaternion.lookRotation(dir);
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler (0f, rotation.y, 0f);
 
