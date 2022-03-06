@@ -8,5 +8,12 @@ public class Shop : MonoBehaviour
     {
         Debug.Log("Cannon Item Purchased");
     }
-    
+    public void PurchaseBaliseItem()
+    {
+        Debug.Log("Cannon Item Purchased");
+    }
+    public void PurchaseCatapultItem()
+    {
+        Debug.Log("Cannon Item Purchased");
+    }
 }
