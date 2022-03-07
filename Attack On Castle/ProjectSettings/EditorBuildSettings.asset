@@ -9,15 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Photon Tuto/launcher.unity
     guid: 3b694695dd2a30544a8730d3b4c06c2b
   - enabled: 1
-    path: Assets/Scenes/Photon Tuto/Room for/Room for 1.unity
-    guid: 1afd77a83a60ee74192e26816ba17a88
-  - enabled: 1
-    path: Assets/Scenes/Photon Tuto/Room for/Room for 2.unity
-    guid: 469956f509d99874d9038813b678e20a
-  - enabled: 1
-    path: Assets/Scenes/Photon Tuto/Room for/Room for 3.unity
-    guid: 0aba5eabbad903a489db72e7831eeaa9
-  - enabled: 1
-    path: Assets/Scenes/Photon Tuto/Room for/Room for 4.unity
-    guid: 7b633e09459eba54eb0c44d1d3b80611
+    path: Assets/Scenes/GameScene.unity
+    guid: ba05e8624b33b44e281765a4ed65f4c3
   m_configObjects: {}

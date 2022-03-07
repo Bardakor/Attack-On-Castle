@@ -4,6 +4,8 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using System;
+using UnityEngine.SceneManagement;
+
 
 public class LauncherTuto : MonoBehaviourPunCallbacks
 {
@@ -73,12 +75,14 @@ public class LauncherTuto : MonoBehaviourPunCallbacks
         {
             // #Critical we need at this point to attempt joining a Random Room. If it fails, we'll get notified in OnJoinRandomFailed() and we'll create one.
             PhotonNetwork.JoinRandomRoom();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Moving to GameScene 
         }
         else
         {
             // keep track of the will to join a room, because when we come back from the game we will get a callback that we are connected, so we need to know what to do then
             isConnecting = PhotonNetwork.ConnectUsingSettings();
             PhotonNetwork.GameVersion = gameVersion;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Moving to GameScene 
         }
 
     }
