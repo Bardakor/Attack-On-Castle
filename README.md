@@ -12,11 +12,11 @@ You will be able to find a Tower Defense using Unity 3D *(2020.3.23)* with a won
 Here are some examples :
 
 ![This is the
-map](https://github.com/Bardakor/Attack-On-Castle/tree/main/readmePictures/mapCastle.png)
+map](https://github.com/Bardakor/Attack-On-Castle/blob/main/readmePictures/mapCastle.png)
 
 
 ![This is the
-map](https://github.com/Bardakor/Attack-On-Castle/tree/main/readmePictures/mapCastle2.png)
+map](https://github.com/Bardakor/Attack-On-Castle/blob/main/readmePictures/mapCastle2.png)
 
 **What is left to do:**
 - [x] Start game menu
