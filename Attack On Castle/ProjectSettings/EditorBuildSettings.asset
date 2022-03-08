@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Photon Tuto/launcher.unity
-    guid: 3b694695dd2a30544a8730d3b4c06c2b
+    path: Assets/Scenes/NeoLauncher.unity
+    guid: 42ff0ddb2e9d2984999ea11145e136bb
+  - enabled: 1
+    path: Assets/Scenes/NeoLobby.unity
+    guid: 0a0cdc05e360472468fb7ad1d2d9f82f
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: ba05e8624b33b44e281765a4ed65f4c3
