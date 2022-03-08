@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
-    public Color hoverColor;
+    public Material hoverMaterial;
     public Vector3 positionOffset;
     private GameObject turret;
     private Renderer rend;
-    private Color startColor;
+    private Material startMaterial;
     void Start()
     {
         rend = GetComponent<Renderer>();
-        startColor = rend.material.color;
+        startMaterial = rend.material;
     }
     void OnMouseDown ()
     {
@@ -29,10 +29,10 @@ public class Node : MonoBehaviour
     }
     void OnMouseEnter ()
     {
-        rend.material.color = hoverColor; 
+        rend.material = hoverMaterial; 
     }
     void OnMouseExit ()
     {
-        rend.material.color = startColor;
+        rend.material = startMaterial;
     }
 }
