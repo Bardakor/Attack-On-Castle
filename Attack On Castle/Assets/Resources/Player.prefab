@@ -415,8 +415,8 @@ GameObject:
   - component: {fileID: 7983083696216095907}
   - component: {fileID: 7983083696216095906}
   - component: {fileID: 7983083696216095905}
-  - component: {fileID: 8988578899696131652}
-  - component: {fileID: 905137918856395168}
+  - component: {fileID: 3062015359224767041}
+  - component: {fileID: 6430068557862815743}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -506,7 +506,7 @@ MonoBehaviour:
   scrollSpeed: 5
   minY: 15
   maxY: 70
---- !u!114 &8988578899696131652
+--- !u!114 &3062015359224767041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -523,13 +523,13 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 3
   OwnershipTransfer: 0
-  observableSearch: 2
+  observableSearch: 0
   ObservedComponents:
-  - {fileID: 905137918856395168}
+  - {fileID: 6430068557862815743}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &905137918856395168
+--- !u!114 &6430068557862815743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
@@ -10,7 +10,7 @@ public class SpawnPlayers : MonoBehaviour
     public float minx;
     public float maxx;
     public float miny;
-    public float maxy;
+    public float maxy; 
 
     private void Start()
     {
