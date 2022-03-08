@@ -504,8 +504,8 @@ MonoBehaviour:
   panSpeed: 30
   panBorderThickness: 10
   scrollSpeed: 5
-  minY: -35
-  maxY: 50
+  minY: 15
+  maxY: 70
 --- !u!114 &8988578899696131652
 MonoBehaviour:
   m_ObjectHideFlags: 0
