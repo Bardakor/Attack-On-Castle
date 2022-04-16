@@ -23,7 +23,7 @@ map](https://github.com/Bardakor/Attack-On-Castle/blob/main/readmePictures/mapCa
 - [x] Map of the game
 - [x] Able to put defenses on the map
 - [ ] Have different levels (Hard, Normal, Easy)
-- [ ] Other things coming soon.
+- [ ] Other things coming soon
 
 ## Why this project
 We wanted to try to build a Tower Defense game inspired by LoL (for the camera), the Game of Thrones universe and the Middle Ages in general.
