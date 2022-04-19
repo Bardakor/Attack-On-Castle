@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,13 +10,31 @@ public class Enemy : MonoBehaviour
     private Transform target;
     private string rot;
     private int waypointIndex = 0;
+    public float maxHealth = 100f;
+    private float health;
+
+    public Image healthbar;
 
     void Start()
     {
         target = WayPoints.points[0];
         rot = target.tag;
+        health = maxHealth;
         
     }  
+
+    public void TakeDamage (int damage)
+    {
+        health -= damage;
+        healthbar.fillAmount = health / maxHealth;
+
+        if (health <= 0)
+            Die();
+    }
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
 
     void Update()
     {
