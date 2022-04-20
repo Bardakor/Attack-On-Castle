@@ -7,6 +7,7 @@ public class Bolt : MonoBehaviour
     private Transform target;
     public float speed = 70f;
     public GameObject impactEffect;
+    public int damage = 25;
     //Find the target of the turret
     public void Seek (Transform _target)
     {
@@ -36,12 +37,15 @@ public class Bolt : MonoBehaviour
     }
 
     void HitTarget()
-        {
-            GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
-            Destroy (effectIns, 2f);
-
-            Destroy(target.gameObject);
-            Destroy(gameObject);
-        }
+    {
+        GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
+        Enemy enemy = target.GetComponent<Enemy>();
+        if (enemy != null)
+            enemy.TakeDamage(damage);
+        else
+            Debug.LogError("No script enemy on an enemy weird debug this shit");
+        Destroy (effectIns, 2f);
+        Destroy(gameObject);
+    }
     
 }
