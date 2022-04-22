@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     private int waypointIndex = 0;
     public float maxHealth = 100f;
     private float health;
+    public int money = 50;
 
     public Image healthbar;
 
@@ -33,6 +34,8 @@ public class Enemy : MonoBehaviour
     }
     private void Die()
     {
+        PlayerStat.money += money;
+        Debug.Log(PlayerStat.money);
         Destroy(gameObject);
     }
 
