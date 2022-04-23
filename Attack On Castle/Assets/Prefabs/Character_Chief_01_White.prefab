@@ -3180,6 +3180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   maxHealth: 100
+  money: 50
   healthbar: {fileID: 6389508897806042750}
 --- !u!1 &7423846375848858700
 GameObject:
