@@ -368,7 +368,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6c41060008e1143a0a9e4c9f86cf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standartTurretPrefab: {fileID: 3471354417470553213, guid: 1ff6701f43383354581f04fe3119c37e, type: 3}
+  balistaTurretPrefab: {fileID: 0}
+  cannonTurretPrefab: {fileID: 0}
+  catapultTurretPrefab: {fileID: 0}
 --- !u!114 &6548683111484308900
 MonoBehaviour:
   m_ObjectHideFlags: 0
