@@ -6,8 +6,6 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
 
-
-
     void Awake () //method to avoid to many build managers, be careful with multyplayer
     {
         if (instance != null)
@@ -18,16 +16,22 @@ public class BuildManager : MonoBehaviour
         instance = this; 
     }
 
-    public GameObject standartTurretPrefab;
+    public GameObject balistaTurretPrefab;
+    public GameObject cannonTurretPrefab;
+    public GameObject catapultTurretPrefab;
 
     void Start()
     {
-        turretToBuild = standartTurretPrefab;
+        turretToBuild = null;
     }
     private GameObject turretToBuild;
 
     public GameObject GetTurretToBuild ()
     {
         return turretToBuild;
+    }
+    public void SetTurretToBuild (GameObject turret)
+    {
+        turretToBuild = turret;
     }
 }
