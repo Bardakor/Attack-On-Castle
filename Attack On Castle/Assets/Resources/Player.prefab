@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balistaTurretPrefab: {fileID: 3471354417470553213, guid: 1ff6701f43383354581f04fe3119c37e, type: 3}
-  cannonTurretPrefab: {fileID: 0}
+  cannonTurretPrefab: {fileID: 1638347602806178, guid: 68a39471bcf807f45aace3b120f318f0, type: 3}
   catapultTurretPrefab: {fileID: 6800431905075260802, guid: 4218c7811199a194e80ec818cfd796f1, type: 3}
 --- !u!1 &7983083695856585916
 GameObject:
