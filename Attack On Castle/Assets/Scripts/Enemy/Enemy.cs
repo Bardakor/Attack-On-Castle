@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public float maxHealth = 100f;
     private float health;
     public int money = 50;
+    public int damage = 100;
 
     public Image healthbar;
 
@@ -56,6 +57,7 @@ public class Enemy : MonoBehaviour
     {
         if (waypointIndex >= WayPoints.points.Length - 1)
         {
+            Damage();
             Destroy(gameObject);
         }
         else
@@ -77,6 +79,17 @@ public class Enemy : MonoBehaviour
             transform.Rotate(0, -90, 0);
         }
        
+    }
+
+    void Damage()
+    {
+        Debug.Log(PlayerStat.life);
+        PlayerStat.life -= damage;
+
+        if(PlayerStat.life <= 0)
+        {
+            Debug.Log("You loose");
+        }
     }
 
     
