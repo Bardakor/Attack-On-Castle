@@ -383,6 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9eacc31e0677e34db7120b1e53badd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startLife: 300
   startMoney: 200
 --- !u!1 &7780523188370320690
 GameObject:
