@@ -3119,7 +3119,7 @@ GameObject:
   - component: {fileID: 7423846375841436568}
   - component: {fileID: 7423846376491053643}
   m_Layer: 0
-  m_Name: Character_Chief_01_White
+  m_Name: Enemy simple
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3181,6 +3181,7 @@ MonoBehaviour:
   speed: 5
   maxHealth: 100
   money: 50
+  damage: 100
   healthbar: {fileID: 6389508897806042750}
 --- !u!1 &7423846375848858700
 GameObject:
