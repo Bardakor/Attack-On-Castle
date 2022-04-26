@@ -17,6 +17,10 @@ public class UMLauncher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject roomListItemPrefab;
     [SerializeField] GameObject playerListItemPrefab;
 
+    [SerializeField] GameObject startGameButton;
+    //removed from list component
+    [SerializeField] GameObject leaveRoomButton;
+
     void Awake()
     {
         Instance = this;
@@ -33,6 +37,8 @@ public class UMLauncher : MonoBehaviourPunCallbacks
     {
         Debug.Log("Connected to Master");
         PhotonNetwork.JoinLobby();
+        //sync scene
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     public override void OnJoinedLobby()
@@ -59,16 +65,33 @@ public class UMLauncher : MonoBehaviourPunCallbacks
 
         Player[] players = PhotonNetwork.PlayerList;
 
-        for(int i = 0; i < players.Count(); i++)
+        foreach (Transform child in playerListContent)
+        {
+            Destroy(child.gameObject);
+        }
+
+        for (int i = 0; i < players.Count(); i++)
         {
             Instantiate(playerListItemPrefab, playerListContent).GetComponent<UMPlayerListItem>().SetUp(players[i]);
         }
+
+        startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+    }
+
+    public override void OnMasterClientSwitched(Player newMasterClient)
+    {
+        startGameButton.SetActive(PhotonNetwork.IsMasterClient);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
         errorText.text = "Room creation failed : " + message;
         UMMenuManager.Instance.OpenMenu("Error");
+    }
+
+    public void StartGame()
+    {
+        PhotonNetwork.LoadLevel(1);
     }
 
     public void LeaveRoom()
@@ -99,6 +122,10 @@ public class UMLauncher : MonoBehaviourPunCallbacks
         //loop trough the list
         for (int i = 0; i < roomList.Count; i++)
         {
+            if(roomList[i].RemovedFromList)
+            {
+                continue;
+            }
             Instantiate(roomListItemPrefab, roomListContent).GetComponent<UMRoomListItem>().SetUp(roomList[i]);
         }
     }

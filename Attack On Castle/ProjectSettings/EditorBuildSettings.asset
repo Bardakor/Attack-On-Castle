@@ -5,16 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/OldMulti/NeoLauncher.unity
-    guid: 42ff0ddb2e9d2984999ea11145e136bb
-  - enabled: 0
-    path: Assets/Scenes/OldMulti/NeoLobby.unity
-    guid: 0a0cdc05e360472468fb7ad1d2d9f82f
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/UpdatedMulti/UpdatedLobby.unity
+    guid: 197b72a22fb46c3439fa3c7abc785225
+  - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: ba05e8624b33b44e281765a4ed65f4c3
   m_configObjects: {}
