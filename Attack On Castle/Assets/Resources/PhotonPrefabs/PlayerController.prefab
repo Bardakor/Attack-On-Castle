@@ -111,6 +111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7983083694924926801}
   - component: {fileID: 7983083694924926814}
+  - component: {fileID: 5652069166310675721}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -147,6 +148,19 @@ MonoBehaviour:
   balistaTurretPrefab: {fileID: 3471354417470553213, guid: 1ff6701f43383354581f04fe3119c37e, type: 3}
   cannonTurretPrefab: {fileID: 1638347602806178, guid: 68a39471bcf807f45aace3b120f318f0, type: 3}
   catapultTurretPrefab: {fileID: 6800431905075260802, guid: 4218c7811199a194e80ec818cfd796f1, type: 3}
+--- !u!114 &5652069166310675721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983083694924926800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb4870404bd75a4697929286082f4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 7373947834580466720}
 --- !u!1 &7983083695856585916
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +196,7 @@ RectTransform:
   - {fileID: 3116149681583818202}
   - {fileID: 3116149683335903184}
   m_Father: {fileID: 7983083696004836256}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -265,6 +279,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801168d0f7f23c9448ba639bb21f183c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cannonTurret:
+    prefab: {fileID: 1638347602806178, guid: 68a39471bcf807f45aace3b120f318f0, type: 3}
+    cost: 300
+  balistaTurret:
+    prefab: {fileID: 3471354417470553213, guid: 1ff6701f43383354581f04fe3119c37e, type: 3}
+    cost: 100
+  catapultTurret:
+    prefab: {fileID: 6800431905075260802, guid: 4218c7811199a194e80ec818cfd796f1, type: 3}
+    cost: 200
 --- !u!1 &7983083695893585653
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +406,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 4683778562271187126}
   - {fileID: 7983083695856585917}
   m_Father: {fileID: 7983083695893585650}
   m_RootOrder: 0
@@ -618,6 +642,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7983083695856585914}
+    - target: {fileID: 2649055738382492862, guid: 4fa9cf893ad68b64a9b2c8a2ff08fce6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectBaliseItem
+      objectReference: {fileID: 0}
     - target: {fileID: 2649055738382492863, guid: 4fa9cf893ad68b64a9b2c8a2ff08fce6, type: 3}
       propertyPath: m_PreferredWidth
       value: 70
@@ -652,6 +680,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7983083695856585914}
+    - target: {fileID: 7871075397315958921, guid: 5ab9c577dbd12dc46a6cda03d817eae3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectCatapultItem
+      objectReference: {fileID: 0}
     - target: {fileID: 7871075397315958922, guid: 5ab9c577dbd12dc46a6cda03d817eae3, type: 3}
       propertyPath: m_Name
       value: ShopCatapultItem
@@ -764,7 +796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041592810820266260, guid: aa1d460eae81d8f459f51bfca6070ac0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseCannonItem
+      value: SelectCannonItem
       objectReference: {fileID: 0}
     - target: {fileID: 5041592810820266261, guid: aa1d460eae81d8f459f51bfca6070ac0, type: 3}
       propertyPath: m_PreferredWidth
