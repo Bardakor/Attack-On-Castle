@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Photon.Pun;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -11,13 +10,6 @@ public class Node : MonoBehaviour
     private GameObject turret;
     private Renderer rend;
     private Material startMaterial;
-
-    PhotonView PV;
-
-    void Awake()
-    {
-        PV = GetComponent<PhotonView>();
-    }
 
     //BuildManager buildManager;
     void Start()
@@ -43,9 +35,7 @@ public class Node : MonoBehaviour
 
         //build turret
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-        //instantiate turret with photon network using method RPC_SetTurret
-        turret = PhotonNetwork.Instantiate(turretToBuild.name, transform.position + positionOffset, transform.rotation);
-
+        turret = (GameObject) Instantiate (turretToBuild, transform.position + positionOffset, transform.rotation);
     }
     void OnMouseEnter ()
     {
@@ -61,5 +51,4 @@ public class Node : MonoBehaviour
     {
         rend.material = startMaterial;
     }
-
 }
