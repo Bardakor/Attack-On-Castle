@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Node : MonoBehaviour
 {
     public Material hoverMaterial;
+    public Material redMaterial;
     public Vector3 positionOffset;
 
     [Header("Optional")]
@@ -51,7 +52,15 @@ public class Node : MonoBehaviour
         if (!BuildManager.instance.CanBuild)
             return;
 
-        rend.material = hoverMaterial; 
+        if (BuildManager.instance.HasMoney)
+        {
+            rend.material = hoverMaterial; 
+        }
+        else
+        {
+            rend.material = redMaterial;
+        }
+        
     }
     void OnMouseExit ()
     {
