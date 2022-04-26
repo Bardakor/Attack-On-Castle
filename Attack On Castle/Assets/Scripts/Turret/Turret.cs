@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class Turret : MonoBehaviour
@@ -78,16 +79,29 @@ public class Turret : MonoBehaviour
 
     }
 
-    void Shoot ()
+    // void Shoot ()
+    // {
+    //     GameObject boltGO = (GameObject) Instantiate (bulletPrefab, firePoint.position, firePoint.rotation);
+    //     Bolt bolt = boltGO.GetComponent<Bolt>();
+
+    //     if (bolt != null)
+    //     {
+    //         bolt.Seek(target); 
+    //     }
+    // }
+
+    //rewrite Shoot() to use PhotonNetwork.Instantiate()
+    void Shoot()
     {
-        GameObject boltGO = (GameObject) Instantiate (bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject boltGO = (GameObject)PhotonNetwork.Instantiate(bulletPrefab.name, firePoint.position, firePoint.rotation);
         Bolt bolt = boltGO.GetComponent<Bolt>();
 
         if (bolt != null)
         {
-            bolt.Seek(target); 
+            bolt.Seek(target);
         }
     }
+
     //function to display the range of the turret
     void OnDrawGizmosSelected (){ 
         Gizmos.color = Color.red; 

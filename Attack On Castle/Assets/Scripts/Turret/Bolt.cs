@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Bolt : MonoBehaviour
 {
@@ -36,15 +37,28 @@ public class Bolt : MonoBehaviour
         transform.Translate (dir.normalized * distanceThisFrame, Space.World);
     }
 
-    void HitTarget()
+    // void HitTarget()
+    // {
+    //     GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
+    //     Enemy enemy = target.GetComponent<Enemy>();
+    //     if (enemy != null)
+    //         enemy.TakeDamage(damage);
+    //     else
+    //         Debug.LogError("No script enemy on an enemy weird debug this shit");
+    //     Destroy (effectIns, 2f);
+    //     Destroy(gameObject);
+    // }
+
+    //rewrite HitTarget() to use PhotonNetwork.Instantiate()
+    public void HitTarget()
     {
-        GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
+        GameObject effectIns = (GameObject)PhotonNetwork.Instantiate(impactEffect.name, transform.position, transform.rotation);
         Enemy enemy = target.GetComponent<Enemy>();
         if (enemy != null)
             enemy.TakeDamage(damage);
         else
             Debug.LogError("No script enemy on an enemy weird debug this shit");
-        Destroy (effectIns, 2f);
+        Destroy(effectIns, 2f);
         Destroy(gameObject);
     }
     
