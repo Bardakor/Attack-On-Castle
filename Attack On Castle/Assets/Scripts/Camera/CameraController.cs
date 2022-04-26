@@ -15,10 +15,18 @@ public class CameraController : MonoBehaviour
     public float minY = 10f;
     public float maxY = 80f;
 
+    PhotonView PV;
+
+    void Awake()
+    {
+        PV = GetComponent<PhotonView>();
+    }
+
 
     // Update is called once per frame
     void Update()
     {
+
 
 
         //counter the movement if the mouse exit from the screen
