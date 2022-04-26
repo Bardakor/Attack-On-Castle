@@ -37,6 +37,8 @@ public class Enemy : MonoBehaviour
     {
         PlayerStat.money += money;
         Debug.Log(PlayerStat.money);
+        
+        WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
     }
 
@@ -58,6 +60,7 @@ public class Enemy : MonoBehaviour
         if (waypointIndex >= WayPoints.points.Length - 1)
         {
             Damage();
+            WaveSpawner.EnemiesAlive--;
             Destroy(gameObject);
         }
         else
@@ -83,7 +86,6 @@ public class Enemy : MonoBehaviour
 
     void Damage()
     {
-        Debug.Log(PlayerStat.life);
         PlayerStat.life -= damage;
 
         if(PlayerStat.life <= 0)
