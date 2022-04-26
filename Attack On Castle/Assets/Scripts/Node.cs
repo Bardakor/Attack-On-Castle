@@ -7,7 +7,9 @@ public class Node : MonoBehaviour
 {
     public Material hoverMaterial;
     public Vector3 positionOffset;
-    private GameObject turret;
+
+    [Header("Optional")]
+    public GameObject turret;
     private Renderer rend;
     private Material startMaterial;
 
@@ -19,12 +21,17 @@ public class Node : MonoBehaviour
 
         //buildManager = BuildManager.instance;
     }
+
+    public Vector3 GetBuildPosition()
+    {
+        return transform.position + positionOffset;
+    }
     void OnMouseDown ()
     {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (BuildManager.instance.GetTurretToBuild() == null)
+        if (!BuildManager.instance.CanBuild)
             return;
             
         if (turret != null)
@@ -34,15 +41,14 @@ public class Node : MonoBehaviour
         }
 
         //build turret
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-        turret = (GameObject) Instantiate (turretToBuild, transform.position + positionOffset, transform.rotation);
+        BuildManager.instance.BuildTurretOn(this);
     }
     void OnMouseEnter ()
     {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        if (BuildManager.instance.GetTurretToBuild() == null)
+        if (!BuildManager.instance.CanBuild)
             return;
 
         rend.material = hoverMaterial; 

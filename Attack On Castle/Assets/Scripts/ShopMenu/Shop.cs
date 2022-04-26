@@ -4,25 +4,29 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    public TurretBlueprint cannonTurret;
+    public TurretBlueprint balistaTurret;
+    public TurretBlueprint catapultTurret;
     BuildManager buildManager;
+    
 
     void Start ()
     {
         buildManager = BuildManager.instance;
     }
-    public void PurchaseCannonItem()
+    public void SelectCannonItem()
     {
         Debug.Log("Cannon Item Purchased");
-        buildManager.SetTurretToBuild(buildManager.cannonTurretPrefab);
+        buildManager.SelectTurretToBuild(cannonTurret);
     }
-    public void PurchaseBaliseItem()
+    public void SelectBaliseItem()
     {
         Debug.Log("Baliste Item Purchased");
-        buildManager.SetTurretToBuild(buildManager.balistaTurretPrefab);
+        buildManager.SelectTurretToBuild(balistaTurret);
     }
-    public void PurchaseCatapultItem()
+    public void SelectCatapultItem()
     {
         Debug.Log("Catapult Item Purchased");
-        buildManager.SetTurretToBuild(buildManager.catapultTurretPrefab);
+        buildManager.SelectTurretToBuild(catapultTurret);
     }
 }
