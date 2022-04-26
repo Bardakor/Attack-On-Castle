@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using System.IO;
 
 public class UMPlayerManager : MonoBehaviour
 {
@@ -16,7 +15,6 @@ public class UMPlayerManager : MonoBehaviour
     void CreateController()
     {
         Debug.Log("Instantiate Player");
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController"), Vector3.zero, Quaternion.identity);
     }
 
     void Start()

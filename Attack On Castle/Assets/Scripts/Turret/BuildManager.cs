@@ -6,9 +6,6 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
 
-    //array of turret prefabs
-    public GameObject[] turretPrefabs;
-
     void Awake () //method to avoid to many build managers, be careful with multyplayer
     {
         if (instance != null)

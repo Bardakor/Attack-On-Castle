@@ -111,7 +111,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7983083694924926801}
   - component: {fileID: 7983083694924926814}
-  - component: {fileID: 7638843684032951599}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -145,32 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6c41060008e1143a0a9e4c9f86cf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretPrefabs: []
   balistaTurretPrefab: {fileID: 3471354417470553213, guid: 1ff6701f43383354581f04fe3119c37e, type: 3}
   cannonTurretPrefab: {fileID: 1638347602806178, guid: 68a39471bcf807f45aace3b120f318f0, type: 3}
   catapultTurretPrefab: {fileID: 6800431905075260802, guid: 4218c7811199a194e80ec818cfd796f1, type: 3}
---- !u!114 &7638843684032951599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7983083694924926800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &7983083695856585916
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +275,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7983083695893585650}
   - component: {fileID: 7564411228762891887}
-  - component: {fileID: 6977560085712783625}
+  - component: {fileID: -2161201057246736307}
+  - component: {fileID: -6277079162074983963}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -344,11 +321,23 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 6977560085712783625}
+  - {fileID: -6277079162074983963}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &6977560085712783625
+--- !u!114 &-2161201057246736307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983083695893585653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988938bb746d13444b59c9b1ba70fe96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6277079162074983963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
