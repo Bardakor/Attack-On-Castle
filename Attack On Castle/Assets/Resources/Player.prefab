@@ -166,13 +166,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cannonTurret:
     prefab: {fileID: 1638347602806178, guid: 68a39471bcf807f45aace3b120f318f0, type: 3}
-    cost: 0
+    cost: 300
   balistaTurret:
     prefab: {fileID: 3471354417470553213, guid: 1ff6701f43383354581f04fe3119c37e, type: 3}
-    cost: 0
+    cost: 100
   catapultTurret:
     prefab: {fileID: 6800431905075260802, guid: 4218c7811199a194e80ec818cfd796f1, type: 3}
-    cost: 0
+    cost: 200
 --- !u!1 &7983083695893585653
 GameObject:
   m_ObjectHideFlags: 0
