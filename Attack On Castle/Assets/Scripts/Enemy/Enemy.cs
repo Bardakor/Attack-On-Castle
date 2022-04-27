@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     public int money = 50;
     public int damage = 100;
 
+    public string name;
+
     public Image healthbar;
 
     void Start()

@@ -41,7 +41,8 @@ GameObject:
   - component: {fileID: 6800431905074966946}
   - component: {fileID: 6800431905082646094}
   - component: {fileID: 8015301826574892829}
-  - component: {fileID: 5961537491362834891}
+  - component: {fileID: 3644637280407670568}
+  - component: {fileID: 1285961830943496353}
   m_Layer: 0
   m_Name: catapult_type1
   m_TagString: Untagged
@@ -103,13 +104,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 50
   fireRate: 0.2
-  cost: 200
   enemyTag: Enemy
   partToRotate: {fileID: 6800431905074966946}
   turnSpeed: 10
   bulletPrefab: {fileID: 1196744780447740, guid: 65b22875f82135b43abdb115c7a6b345, type: 3}
   firePoint: {fileID: 7637876617210324530}
---- !u!114 &5961537491362834891
+--- !u!114 &3644637280407670568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,13 +118,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 6800431905075260802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 0
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &1285961830943496353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6800431905075260802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &6800431905075260804
 GameObject:
   m_ObjectHideFlags: 0

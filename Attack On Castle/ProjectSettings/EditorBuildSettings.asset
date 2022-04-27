@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/UpdatedMulti/UpdatedLobby.unity
     guid: 197b72a22fb46c3439fa3c7abc785225
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: ba05e8624b33b44e281765a4ed65f4c3
+    path: Assets/Scenes/GameScene_Lvl1.unity
+    guid: 3a29d9b44afafcb429e7e1e34758d95e
   m_configObjects: {}

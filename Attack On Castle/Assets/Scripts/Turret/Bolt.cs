@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using System.IO;
 
 public class Bolt : MonoBehaviour
 {
@@ -36,9 +38,22 @@ public class Bolt : MonoBehaviour
         transform.Translate (dir.normalized * distanceThisFrame, Space.World);
     }
 
-    void HitTarget()
+    // void HitTarget()
+    // {
+    //     GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
+    //     Enemy enemy = target.GetComponent<Enemy>();
+    //     if (enemy != null)
+    //         enemy.TakeDamage(damage);
+    //     else
+    //         Debug.LogError("No script enemy on an enemy weird debug this shit");
+    //     Destroy (effectIns, 2f);
+    //     Destroy(gameObject);
+    // }
+
+    //rewrite HitTarget the gameobject is instaniated with PhotonNetwork.Instantiate
+    private void HitTarget()
     {
-        GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
+        GameObject effectIns = PhotonNetwork.Instantiate(Path.Combine("TurretPrefab",impactEffect.name), transform.position, transform.rotation);
         Enemy enemy = target.GetComponent<Enemy>();
         if (enemy != null)
             enemy.TakeDamage(damage);
@@ -47,5 +62,7 @@ public class Bolt : MonoBehaviour
         Destroy (effectIns, 2f);
         Destroy(gameObject);
     }
+
+
     
 }

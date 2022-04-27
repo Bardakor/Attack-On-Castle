@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using System;
+using System.IO;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -63,10 +66,27 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
+
+
+
+
     void SpawnEnemy(GameObject enemy)
     {
         Instantiate(enemy, spawnPoint.position , spawnPoint.rotation);
         EnemiesAlive++;
 
     }
+
+    //rewrite spaxn enemy to use PhotonNetwork.Instantiate
+    // void SpawnEnemy(GameObject enemy)
+    // {
+    //     PhotonNetwork.Instantiate(enemy.name, spawnPoint.position, spawnPoint.rotation, 0);
+    //     EnemiesAlive++;
+    // }
+
+
+    
+
+
+
 }

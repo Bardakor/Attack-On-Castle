@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using Photon.Pun;
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour
@@ -37,7 +39,7 @@ public class BuildManager : MonoBehaviour
 
         PlayerStat.money -= turretToBuild.cost;
 
-        GameObject turret = (GameObject) Instantiate (turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
+        GameObject turret = (GameObject) PhotonNetwork.Instantiate (Path.Combine("TurretPrefab",turretToBuild.prefab.name), node.GetBuildPosition(), Quaternion.identity);
         node.turret = turret;
 
         Debug.Log("Turret build! Money left: " + PlayerStat.money);
