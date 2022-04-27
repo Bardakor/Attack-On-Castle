@@ -38,7 +38,10 @@ public class WaveSpawner : MonoBehaviour
     {
         Waves.Add(waves);
         if (waves2.Length > 0)
+        {
             Waves.Add(waves2);
+        }
+            
         if (waves3.Length > 0)
             Waves.Add(waves3);
     }
@@ -73,14 +76,17 @@ public class WaveSpawner : MonoBehaviour
                 yield return new WaitForSeconds(1f / wave.rate);
             }
 
-            waveIndex++;
+            
 
-            if (waveIndex == waves.Length)
-            {
-                Debug.Log("End of the level");
-                this.enabled = false;
-            }
+            
         }
+        waveIndex++;
+        if (waveIndex == waves.Length)
+        {
+            Debug.Log("End of the level");
+            this.enabled = false;
+        }
+
     }
 
 
@@ -89,7 +95,10 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(GameObject enemy,Wave wave)
     {
-        Instantiate(enemy, wave.spawnPoint.position , wave.spawnPoint.rotation);
+        Enemy test;
+        enemy.TryGetComponent(out test);
+        test.spawnPoint = wave.spawnPoint;
+        Instantiate(test, wave.spawnPoint.points[0].position , wave.spawnPoint.points[0].rotation);
         EnemiesAlive++;
 
     }

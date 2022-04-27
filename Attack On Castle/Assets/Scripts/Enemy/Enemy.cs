@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     public float speed = 2f;
-
+    public WayPoints spawnPoint;
     private Transform target;
     private string rot;
     private int waypointIndex = 0;
@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        target = WayPoints.points[0];
+        target = spawnPoint.points[0];
         rot = target.tag;
         health = maxHealth;
         
@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void GetNextWaypoint()
     {
-        if (waypointIndex >= WayPoints.points.Length - 1)
+        if (waypointIndex >= spawnPoint.points.Length - 1)
         {
             Damage();
             WaveSpawner.EnemiesAlive--;
@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour
         else
         {
             waypointIndex++;
-            target = WayPoints.points[waypointIndex];
+            target = spawnPoint.points[waypointIndex];
             rot = target.tag;
         }
     }
