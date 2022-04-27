@@ -7,4 +7,9 @@ public class Wave
     public int count;
     public float rate;
 
+    [SerializeField]
+    public Transform spawnPoint;
+
+    
+
 }
