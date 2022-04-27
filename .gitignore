@@ -78,3 +78,6 @@ crashlytics-build.properties
 
 # MacOS Trash Files
 .DS_Store
+
+#Win_Counter
+win_counter.txt
