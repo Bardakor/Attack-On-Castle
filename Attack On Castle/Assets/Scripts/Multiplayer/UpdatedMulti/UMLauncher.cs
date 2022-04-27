@@ -20,6 +20,7 @@ public class UMLauncher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject startGameButton;
     //removed from list component
     [SerializeField] GameObject leaveRoomButton;
+    public int LevelNumber;
 
     void Awake()
     {
@@ -57,6 +58,10 @@ public class UMLauncher : MonoBehaviourPunCallbacks
         PhotonNetwork.CreateRoom(roomNameInputField.text);
         UMMenuManager.Instance.OpenMenu("Loading");
     }
+    public void ChangeLevelNumber (string lvl) {
+        LevelNumber = int.Parse(lvl);
+        Debug.Log("Level number is now " + LevelNumber);
+    }
 
     public override void OnJoinedRoom()
     {
@@ -91,7 +96,15 @@ public class UMLauncher : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
-        PhotonNetwork.LoadLevel(1);
+        if (1 <= LevelNumber && LevelNumber <= 3)
+        {
+            PhotonNetwork.LoadLevel(LevelNumber);
+        }
+        else
+        {
+            Debug.LogError("Level number is out of range\nDefault 1");
+            PhotonNetwork.LoadLevel(1);
+        }
     }
 
     public void LeaveRoom()
@@ -104,8 +117,6 @@ public class UMLauncher : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.JoinRoom(info.Name);
         UMMenuManager.Instance.OpenMenu("Loading");
-
-
     }
 
     public override void OnLeftRoom()
