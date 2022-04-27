@@ -38,7 +38,7 @@ public class WaveSpawner : MonoBehaviour
     {
         Waves.Add(waves);
         if (waves2.Length > 0)
-            Debug.Log("Popo");
+            Waves.Add(waves2);
         if (waves3.Length > 0)
             Waves.Add(waves3);
     }
