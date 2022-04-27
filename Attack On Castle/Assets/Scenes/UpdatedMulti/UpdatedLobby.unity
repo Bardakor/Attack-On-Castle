@@ -4529,6 +4529,7 @@ MonoBehaviour:
   roomListItemPrefab: {fileID: 1645680553150752609, guid: b28db83d71745ca4fb447dc350e86232, type: 3}
   playerListItemPrefab: {fileID: 1591120705167467719, guid: 46ee9f5dd3b51d045823d990830974e2, type: 3}
   startGameButton: {fileID: 1531592330}
+  levelselector: {fileID: 425154651}
   leaveRoomButton: {fileID: 0}
   LevelNumber: 1
 --- !u!114 &1568722418
@@ -5192,7 +5193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1996425987
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ public class UMLauncher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject playerListItemPrefab;
 
     [SerializeField] GameObject startGameButton;
+    [SerializeField] GameObject levelselector;
     //removed from list component
     [SerializeField] GameObject leaveRoomButton;
     public int LevelNumber;
@@ -81,11 +82,13 @@ public class UMLauncher : MonoBehaviourPunCallbacks
         }
 
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+        levelselector.SetActive(PhotonNetwork.IsMasterClient);
     }
 
     public override void OnMasterClientSwitched(Player newMasterClient)
     {
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+        levelselector.SetActive(PhotonNetwork.IsMasterClient);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
