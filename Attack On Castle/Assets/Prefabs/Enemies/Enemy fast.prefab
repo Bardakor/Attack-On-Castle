@@ -429,10 +429,10 @@ Animator:
   m_GameObject: {fileID: 125820}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a177b0e6ff26a894180468c168e802cc, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d7c55390ab0320c47b84f63184ecb1b9, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -450,10 +450,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abefd7d6e8c799142bbe39f3c883b1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 15
   maxHealth: 50
   money: 25
   damage: 75
+  name: 
   healthbar: {fileID: 3753223905134091416}
 --- !u!114 &6507926300422134843
 MonoBehaviour:
