@@ -22,7 +22,7 @@ map](https://github.com/Bardakor/Attack-On-Castle/blob/main/readmePictures/mapCa
 - [x] Start game menu
 - [x] Map of the game
 - [x] Able to put defenses on the map
-- [ ] Have different levels (Hard, Normal, Easy)
+- [x] Have different levels (Hard, Normal, Easy)
 - [ ] Other things coming soon
 
 ## Why this project
