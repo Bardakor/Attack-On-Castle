@@ -85,7 +85,7 @@ public class WaveSpawner : MonoBehaviour
         {
             Debug.Log("End of the level");
             this.enabled = false;
-            File.WriteAllText("win_counter.txt", "You win the game");
+            File.WriteAllText("win_counter.txt", "You won the game");
         }
 
     }
