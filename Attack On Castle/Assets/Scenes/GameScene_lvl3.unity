@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465788, g: 0.49641472, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23271,8 +23271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9eacc31e0677e34db7120b1e53badd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 600
-  startHealth: 2000
+  startMoney: 1000
 --- !u!114 &1005106554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23286,12 +23285,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemy: {fileID: 7423846375848855668, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
-    count: 2
+  - enemy: {fileID: 125820, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
+    count: 4
     rate: 1
     spawnPoint: {fileID: 2004591099}
   - enemy: {fileID: 141462, guid: 4077c14a264a5f14b8d66749500af8bd, type: 3}
     count: 1
+    rate: 1
+    spawnPoint: {fileID: 2004591099}
+  - enemy: {fileID: 7423846375848855668, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
+    count: 3
     rate: 1
     spawnPoint: {fileID: 2004591099}
   waves2:
@@ -23299,17 +23302,25 @@ MonoBehaviour:
     count: 3
     rate: 1
     spawnPoint: {fileID: 951342625}
-  - enemy: {fileID: 7423846375848855668, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
+  - enemy: {fileID: 141462, guid: 4077c14a264a5f14b8d66749500af8bd, type: 3}
     count: 2
     rate: 1
     spawnPoint: {fileID: 951342625}
+  - enemy: {fileID: 125820, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
+    count: 4
+    rate: 1
+    spawnPoint: {fileID: 951342625}
   waves3:
-  - enemy: {fileID: 7423846375848855668, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
-    count: 2
+  - enemy: {fileID: 141462, guid: 4077c14a264a5f14b8d66749500af8bd, type: 3}
+    count: 1
     rate: 1
     spawnPoint: {fileID: 765111193}
   - enemy: {fileID: 125820, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
     count: 5
+    rate: 1
+    spawnPoint: {fileID: 765111193}
+  - enemy: {fileID: 7423846375848855668, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
+    count: 3
     rate: 1
     spawnPoint: {fileID: 765111193}
   timeBetweenWaves: 5
