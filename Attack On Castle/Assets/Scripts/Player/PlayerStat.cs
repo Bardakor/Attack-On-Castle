@@ -10,7 +10,7 @@ public class PlayerStat : MonoBehaviour
     public static int money;
 
     public int startMoney = 200;
-    public int startHealth = 1500;
+    public static int startHealth = 1500;
 
     // Start is called before the first frame update
     void Start()
