@@ -94,12 +94,10 @@ public class WaveSpawner : MonoBehaviour
 
 
 
-    void SpawnEnemy(GameObject enemy,Wave wave)
+    void SpawnEnemy(Enemy enemy,Wave wave)
     {
-        Enemy test;
-        enemy.TryGetComponent(out test);
-        test.spawnPoint = wave.spawnPoint;
-        Instantiate(test, wave.spawnPoint.points[0].position , wave.spawnPoint.points[0].rotation);
+        enemy.spawnPoint = wave.spawnPoint;
+        Instantiate(enemy, wave.spawnPoint.points[0].position , wave.spawnPoint.points[0].rotation);
         EnemiesAlive++;
 
     }

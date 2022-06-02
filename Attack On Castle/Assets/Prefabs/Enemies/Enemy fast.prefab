@@ -451,9 +451,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  spawnPoint: {fileID: 0}
   maxHealth: 50
   money: 25
   damage: 75
+  max: 4
   name: 
   healthbar: {fileID: 3753223905134091416}
 --- !u!114 &6507926300422134843

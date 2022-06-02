@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     private float health;
     public int money = 50;
     public int damage = 100;
+    public int max = 2;
 
     public string name;
 
@@ -24,8 +25,7 @@ public class Enemy : MonoBehaviour
         target = spawnPoint.points[0];
         rot = target.tag;
         health = maxHealth;
-        
-    }  
+    }
 
     public void TakeDamage (int damage)
     {
@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
         Debug.Log(PlayerStat.money);
         
         WaveSpawner.EnemiesAlive--;
+        Survival.EnemiesAlive--;
         Destroy(gameObject);
     }
 
@@ -63,6 +64,8 @@ public class Enemy : MonoBehaviour
         {
             Damage();
             WaveSpawner.EnemiesAlive--;
+            Survival.EnemiesAlive--;
+
             Destroy(gameObject);
         }
         else
