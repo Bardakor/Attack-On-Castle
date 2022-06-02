@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.IO;
+using Photon.Pun;
 
 public class Node : MonoBehaviour
 {
@@ -42,7 +44,23 @@ public class Node : MonoBehaviour
             return;
 
         //build turret
-        BuildManager.instance.BuildTurretOn(this);
+        BuildTurret(BuildManager.instance.GetTurretToBuild());
+    }
+
+    void BuildTurret(TurretBlueprint blueprint)
+    {
+        if (PlayerStat.money < blueprint.cost)
+        {
+            Debug.Log("Not enough money to build that turret");
+            return; 
+        }
+
+        PlayerStat.money -= blueprint.cost;
+
+        GameObject _turret = (GameObject) PhotonNetwork.Instantiate (Path.Combine("TurretPrefab",blueprint.prefab.name), GetBuildPosition(), Quaternion.identity);
+        turret = _turret;
+
+        Debug.Log("Turret build!");
     }
     void OnMouseEnter ()
     {
