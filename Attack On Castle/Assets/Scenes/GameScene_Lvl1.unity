@@ -14093,7 +14093,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startMoney: 200
-  startHealth: 1500
 --- !u!114 &686426204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14107,11 +14106,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemy: {fileID: 7423846375848855668, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
+  - enemy: {fileID: 7423846376491053643, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
     count: 3
     rate: 1
     spawnPoint: {fileID: 892587794}
-  - enemy: {fileID: 125820, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
+  - enemy: {fileID: 7964375817453170060, guid: 4077c14a264a5f14b8d66749500af8bd, type: 3}
     count: 2
     rate: 1
     spawnPoint: {fileID: 892587794}

@@ -99,7 +99,7 @@ public class UMLauncher : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
-        if (1 <= LevelNumber && LevelNumber <= 3)
+        if (1 <= LevelNumber && LevelNumber <= 4)
         {
             PhotonNetwork.LoadLevel(LevelNumber);
         }
