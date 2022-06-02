@@ -5,7 +5,7 @@ using UnityEngine;
 public class Survival : MonoBehaviour
 {
     public static int EnemiesAlive = 0;
-    public static int Round = 3;
+    public static int Round = 0;
     public static int maxWaves = 2;
 
     public Enemy SlowEnemy;
