@@ -1892,6 +1892,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7983083695893585650}
     m_Modifications:
+    - target: {fileID: 736252488953748445, guid: 96a72c855be380e42a5ebc758d9e1bc4, type: 3}
+      propertyPath: m_Text
+      value: '<b>SELL</b>
+
+        $50'
+      objectReference: {fileID: 0}
     - target: {fileID: 1286728028530742451, guid: 96a72c855be380e42a5ebc758d9e1bc4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1943,6 +1949,12 @@ PrefabInstance:
     - target: {fileID: 3019384092191468344, guid: 96a72c855be380e42a5ebc758d9e1bc4, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -27.2043
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252420335888324406, guid: 96a72c855be380e42a5ebc758d9e1bc4, type: 3}
+      propertyPath: m_Text
+      value: '<b>UPGRADE</b>
+
+        $150'
       objectReference: {fileID: 0}
     - target: {fileID: 3983998075514353757, guid: 96a72c855be380e42a5ebc758d9e1bc4, type: 3}
       propertyPath: ui
