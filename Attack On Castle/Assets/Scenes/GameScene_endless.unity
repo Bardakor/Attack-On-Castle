@@ -4937,6 +4937,8 @@ MonoBehaviour:
   Spawn1: {fileID: 819849764}
   Spawn2: {fileID: 1754645662}
   Spawn3: {fileID: 1212857080}
+  timeBetweenWaves: 5
+  countdown: 2
 --- !u!4 &162167955
 Transform:
   m_ObjectHideFlags: 0

@@ -8,6 +8,15 @@ public class Survival : MonoBehaviour
     public static int Round = 0;
     public static int maxWaves = 2;
 
+
+    public static string roundtxt = $"";
+    public static string Timertxt = $"";
+
+
+    public static float TimeElapsed = 0f;
+    public static int minutes = Mathf.FloorToInt(Survival.TimeElapsed / 60F);
+    public static int seconds = Mathf.FloorToInt(Survival.TimeElapsed - minutes * 60);
+
     public Enemy SlowEnemy;
     public Enemy MidEnemy;
     public Enemy FastEnemy;
@@ -19,6 +28,13 @@ public class Survival : MonoBehaviour
 
     private List<WayPoints> SpawnPoints = new List<WayPoints> { };
     private List<Enemy> Enemies = new List<Enemy> { };
+
+    [SerializeField]
+    private float timeBetweenWaves = 5f;
+
+
+    [SerializeField]
+    public float countdown = 2f;
 
 
 
@@ -34,16 +50,32 @@ public class Survival : MonoBehaviour
         Enemies.Add(MidEnemy);
         Enemies.Add(FastEnemy);
         Enemies.Add(MidEnemy);
+        Timertxt = string.Format("{0:0}:{1:00}", minutes, seconds);
+        roundtxt = "Round 0";
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        TimeElapsed += Time.deltaTime;
+        minutes = Mathf.FloorToInt(Survival.TimeElapsed / 60F);
+        seconds = Mathf.FloorToInt(Survival.TimeElapsed - minutes * 60);
+        Timertxt = string.Format("{0:0}:{1:00}", minutes, seconds);
+        
+        
         if (EnemiesAlive > 0)
             return;
+        if (countdown > 0f)
+        {
+            countdown -= Time.deltaTime;
+            return;
+        }
+
 
         Round += 1;
+        roundtxt = $"Round {Round}";
         if (Round % 2 == 0)
             maxWaves += 1;
         
@@ -62,7 +94,8 @@ public class Survival : MonoBehaviour
             Enemies.Add(SlowEnemy);
         if (Round % 10 == 0)
             SpawnEnemy(MiniBoss, SpawnPoints[Random.Range(0, 3)]);
-        
+
+        countdown = timeBetweenWaves;
         int nbWaves = Random.Range(maxWaves, maxWaves + 3);
         StartCoroutine(SpawnWave(nbWaves));
     }
