@@ -80,7 +80,7 @@ public class Node : MonoBehaviour
         PlayerStat.money -= turretBlueprint.upgradeCost;
 
         //get rid of the old turret
-        Destroy(turret);
+        PhotonNetwork.Destroy(turret);
 
         //Build a new one
         GameObject _turret = (GameObject) PhotonNetwork.Instantiate (Path.Combine("TurretPrefab",turretBlueprint.upgradedPrefab.name), GetBuildPosition(), Quaternion.identity);
