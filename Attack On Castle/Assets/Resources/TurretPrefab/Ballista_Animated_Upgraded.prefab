@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 3471354416630548846}
   - component: {fileID: 561046877159057283}
   m_Layer: 0
-  m_Name: Ballista_Animated
+  m_Name: Ballista_Animated_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -552,7 +552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 15
-  fireRate: 1.5
+  fireRate: 1
   enemyTag: Enemy
   partToRotate: {fileID: 3471354417470971999}
   turnSpeed: 10
@@ -630,7 +630,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8e49aad0e36bc9d459e9836a7dd5c9cb, type: 2}
+  - {fileID: 2100000, guid: 97da376fefcb36749b397b46c30f9dad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3644637280407670568}
   - component: {fileID: 1285961830943496353}
   m_Layer: 0
-  m_Name: catapult_type1
+  m_Name: catapult_type1_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b289f86bd9da946957b1f646de405a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 25
+  range: 50
   fireRate: 0.2
   enemyTag: Enemy
   partToRotate: {fileID: 6800431905074966946}
@@ -212,7 +212,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db6824423c46c28458901f5942a2f82c, type: 2}
+  - {fileID: 2100000, guid: 97da376fefcb36749b397b46c30f9dad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -293,7 +293,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db6824423c46c28458901f5942a2f82c, type: 2}
+  - {fileID: 2100000, guid: 97da376fefcb36749b397b46c30f9dad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -374,7 +374,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db6824423c46c28458901f5942a2f82c, type: 2}
+  - {fileID: 2100000, guid: 97da376fefcb36749b397b46c30f9dad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -455,7 +455,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db6824423c46c28458901f5942a2f82c, type: 2}
+  - {fileID: 2100000, guid: 97da376fefcb36749b397b46c30f9dad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
