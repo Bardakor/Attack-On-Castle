@@ -11,10 +11,10 @@ public class UMPlayerNameManager : MonoBehaviour
     
     void Start()
     {
-        if(PlayerPrefs.HasKey("Username"))
+        if(PlayerPrefs.HasKey("username"))
         {
-            usernameInput.text = PlayerPrefs.GetString("Username");
-            PhotonNetwork.NickName = PlayerPrefs.GetString("Username");        
+            usernameInput.text = PlayerPrefs.GetString("username");
+            PhotonNetwork.NickName = PlayerPrefs.GetString("username");        
         }
 
         else
