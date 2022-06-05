@@ -11,8 +11,12 @@ public class Node : MonoBehaviour
     public Material redMaterial;
     public Vector3 positionOffset;
 
-    [Header("Optional")]
+    [HideInInspector]
     public GameObject turret;
+    [HideInInspector]
+    public TurretBlueprint turretBlueprint;
+    [HideInInspector]
+    public bool isUpgraded = false;
     private Renderer rend;
     private Material startMaterial;
 
@@ -47,7 +51,7 @@ public class Node : MonoBehaviour
         BuildTurret(BuildManager.instance.GetTurretToBuild());
     }
 
-    void BuildTurret(TurretBlueprint blueprint)
+    void BuildTurret(TurretBlueprint blueprint) 
     {
         if (PlayerStat.money < blueprint.cost)
         {
@@ -60,7 +64,33 @@ public class Node : MonoBehaviour
         GameObject _turret = (GameObject) PhotonNetwork.Instantiate (Path.Combine("TurretPrefab",blueprint.prefab.name), GetBuildPosition(), Quaternion.identity);
         turret = _turret;
 
+        turretBlueprint = blueprint;
+
         Debug.Log("Turret build!");
+    }
+
+    public void UpgradeTurret()
+    {
+         if (PlayerStat.money < turretBlueprint.upgradeCost)
+        {
+            Debug.Log("Not enough money to upgrade that turret");
+            return; 
+        }
+
+        PlayerStat.money -= turretBlueprint.upgradeCost;
+
+        //get rid of the old turret
+        Destroy(turret);
+
+        //Build a new one
+        GameObject _turret = (GameObject) PhotonNetwork.Instantiate (Path.Combine("UpgradedTurretPrefab",turretBlueprint.upgradedPrefab.name), GetBuildPosition(), Quaternion.identity);
+        //GameObject _turret = (GameObject) Instantiate (turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+        turret = _turret;
+
+
+        isUpgraded = true; 
+
+        Debug.Log("Turret upgraded!");
     }
     void OnMouseEnter ()
     {
