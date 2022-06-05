@@ -83,7 +83,7 @@ public class Node : MonoBehaviour
         Destroy(turret);
 
         //Build a new one
-        GameObject _turret = (GameObject) PhotonNetwork.Instantiate (Path.Combine("UpgradedTurretPrefab",turretBlueprint.upgradedPrefab.name), GetBuildPosition(), Quaternion.identity);
+        GameObject _turret = (GameObject) PhotonNetwork.Instantiate (Path.Combine("TurretPrefab",turretBlueprint.upgradedPrefab.name), GetBuildPosition(), Quaternion.identity);
         //GameObject _turret = (GameObject) Instantiate (turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
         turret = _turret;
 

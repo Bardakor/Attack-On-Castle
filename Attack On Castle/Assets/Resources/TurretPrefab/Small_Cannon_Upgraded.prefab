@@ -206,7 +206,7 @@ MonoBehaviour:
   enemyTag: Enemy
   partToRotate: {fileID: 4501404751446666}
   turnSpeed: 8
-  bulletPrefab: {fileID: 1920044721433900, guid: 56fd5142c4049e44e80a425288d1e618, type: 3}
+  bulletPrefab: {fileID: 1920044721433900, guid: e826f6016aace674793909ed2b79c30d, type: 3}
   firePoint: {fileID: 2159914438055108495}
 --- !u!114 &2199702285396729032
 MonoBehaviour:
