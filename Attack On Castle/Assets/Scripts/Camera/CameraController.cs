@@ -26,14 +26,20 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool pause = Input.GetKeyDown(KeyCode.Escape);
 
+        if(pause)
+        {
+            GameObject.Find("Pause").GetComponent<Pause>().TogglePause();
+            
+        }
 
-
-        //counter the movement if the mouse exit from the screen
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.P))
         {
             doMovement = !doMovement;
-        }
+        }  
+
+
         if (!doMovement)
         {
             return;

@@ -9,6 +9,9 @@ public class UMMenu : MonoBehaviour
 
     public bool isOpen;
 
+    
+    
+
     public void Open()
     {
         isOpen = true;

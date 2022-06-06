@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class Pause : MonoBehaviour
 {
     public static bool paused = false;
     private bool disconnecting = false;
@@ -15,29 +16,18 @@ public class PauseMenu : MonoBehaviour
         paused = !paused;
 
         transform.GetChild(0).gameObject.SetActive(paused);
-        Cursor.lockState = paused ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = paused;
     }
 
     public void Quit()
     {
         disconnecting = true;
         PhotonNetwork.Disconnect();
-        Application.Quit();
+        SceneManager.LoadScene(0);
+
     }
 
     private void Update()
     {
-        bool pause = Input.GetKeyDown(KeyCode.Escape);
-
-        if(pause)
-        {
-            GameObject.Find("Pause").GetComponent<PauseMenu>().TogglePause();
-        }
-        if(paused)
-        {
-            //disable all control from script CameraController
-        }
-
+        
     }
 }
