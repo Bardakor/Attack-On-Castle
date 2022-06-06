@@ -47,7 +47,6 @@ public class UMLauncher : MonoBehaviourPunCallbacks
     {
         UMMenuManager.Instance.OpenMenu("Title");
         Debug.Log("Joined lobby");
-        PhotonNetwork.NickName = "Player" + Random.Range(0, 1000).ToString("0000");
     }
 
     public void CreateRoom()
