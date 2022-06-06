@@ -26,6 +26,11 @@ public class Pause : MonoBehaviour
 
     }
 
+    public void Quitgame()
+    {
+        Application.Quit();
+    }
+
     private void Update()
     {
         
