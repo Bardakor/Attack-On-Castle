@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Net;
-using System.IO;
-using Photon.Pun;
 
 public class Enemy : MonoBehaviour
 {
@@ -98,18 +95,6 @@ public class Enemy : MonoBehaviour
 
         if(PlayerStat.life <= 0)
         {
-            var url = "http://192.168.1.48:8080/lost/" + PhotonNetwork.NickName;
-
-            var request = WebRequest.Create(url);
-            request.Method = "GET";
-
-            using var webResponse = request.GetResponse();
-            using var webStream = webResponse.GetResponseStream();
-
-            using var reader = new StreamReader(webStream);
-            var data = reader.ReadToEnd();
-
-            Debug.Log("data" + data);
             Debug.Log("You loose");
         }
     }
