@@ -80,7 +80,7 @@ public class Node : MonoBehaviour
         PlayerStat.money -= turretBlueprint.upgradeCost;
 
         //get rid of the old turret
-        PhotonNetwork.Destroy(turret);
+        PhotonNetwork.Destroy(turret); //TODO photon check 
 
         //Build a new one
         GameObject _turret = (GameObject) PhotonNetwork.Instantiate (Path.Combine("TurretPrefab",turretBlueprint.upgradedPrefab.name), GetBuildPosition(), Quaternion.identity);
@@ -92,6 +92,17 @@ public class Node : MonoBehaviour
 
         Debug.Log("Turret upgraded!");
     }
+
+    public void SellTurret()
+    {
+        PlayerStat.money += turretBlueprint.GetSellAmount();
+
+        PhotonNetwork.Destroy(turret);//TODO: photon check
+
+        turretBlueprint = null;
+        Debug.Log("Turret sold!");
+    }
+
     void OnMouseEnter ()
     {
         if (EventSystem.current.IsPointerOverGameObject())

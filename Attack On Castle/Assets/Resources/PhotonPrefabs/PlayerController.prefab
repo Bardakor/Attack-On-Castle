@@ -455,8 +455,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -701, y: 427}
-  m_SizeDelta: {x: 296.2432, y: 75.983}
+  m_AnchoredPosition: {x: -694.7272, y: 412.68}
+  m_SizeDelta: {x: 210.5456, y: 74.264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6237643432319575492
 CanvasRenderer:
@@ -842,7 +842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7081599879371421469
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1375,8 +1375,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -67, y: 427}
-  m_SizeDelta: {x: 296.2432, y: 75.983}
+  m_AnchoredPosition: {x: -104.99246, y: 412.68}
+  m_SizeDelta: {x: 209.9849, y: 74.269}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8211290033910779769
 CanvasRenderer:
@@ -1593,10 +1593,10 @@ RectTransform:
   m_Father: {fileID: 5730130528287294797}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 48.1016, y: -27.2043}
-  m_SizeDelta: {x: 96.2032, y: 54.4086}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5849124447642848732
 CanvasRenderer:
@@ -1797,7 +1797,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7359672422556911314}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 13.8}
+  m_LocalPosition: {x: 0, y: 0, z: -2.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4702266916817520008}
@@ -2028,6 +2028,7 @@ MonoBehaviour:
   ui: {fileID: 2575995345520747696}
   upgradeCost: {fileID: 7814510550069767264}
   upgradeButton: {fileID: 7089398197315357540}
+  sellAmount: {fileID: 0}
 --- !u!1 &7983083694924926800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,10 +2528,10 @@ RectTransform:
   m_Father: {fileID: 5730130528287294797}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 144.30481, y: -27.2043}
-  m_SizeDelta: {x: 96.2032, y: 54.4086}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6727069929599971577
 CanvasRenderer:
@@ -2613,7 +2614,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5979824345741247453}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7532908765486686367}
+        m_TargetAssemblyTypeName: NodeUI, Assembly-CSharp
+        m_MethodName: Sell
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8686062504256683923
 GameObject:
   m_ObjectHideFlags: 0
@@ -2850,7 +2863,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9007106467363724391}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 13.8}
+  m_LocalPosition: {x: 0, y: 0, z: -1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2601441843854427987}
