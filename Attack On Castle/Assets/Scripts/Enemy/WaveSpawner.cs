@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using System;
 using System.IO;
+using System.Net;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -85,7 +86,18 @@ public class WaveSpawner : MonoBehaviour
         {
             Debug.Log("End of the level");
             this.enabled = false;
-            File.WriteAllText("win_counter.txt", "You won the game");
+            var url = "http://192.168.1.48:8080/win/" + PhotonNetwork.NickName+"_"+Survival.seconds.ToString();
+
+            var request = WebRequest.Create(url);
+            request.Method = "GET";
+
+            using var webResponse = request.GetResponse();
+            using var webStream = webResponse.GetResponseStream();
+
+            using var reader = new StreamReader(webStream);
+            var data = reader.ReadToEnd();
+
+            Debug.Log("STATUS_SERVEUR" + data);
         }
 
     }
