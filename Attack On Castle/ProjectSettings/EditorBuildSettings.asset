@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene_endless.unity
     guid: 1fc7e2526349dd14fb94951265d28fea
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: bdf0c5b1095b94f139267f368287dc4e
+  - enabled: 1
+    path: Assets/Scenes/Loose.unity
+    guid: af64ba978919b4cbebbcee713c0f3a17
   m_configObjects: {}

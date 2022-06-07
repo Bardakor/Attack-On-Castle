@@ -16,6 +16,8 @@ public class WaveSpawner : MonoBehaviour
 
     private List<Wave[]> Waves = new List<Wave[]> { };
 
+    public static bool win = false;
+
 
 
 
@@ -98,6 +100,13 @@ public class WaveSpawner : MonoBehaviour
             var data = reader.ReadToEnd();
 
             Debug.Log("STATUS_SERVEUR" + data);
+
+            //make UI of win appear
+            //GameObject.Find("Win").GetComponent<Win>().TogglePause();
+
+            win = true;
+            //load scene 4
+            PhotonNetwork.LoadLevel("4");
         }
 
     }

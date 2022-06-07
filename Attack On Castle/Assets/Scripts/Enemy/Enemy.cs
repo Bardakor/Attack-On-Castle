@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour
 
     public string name;
 
+    public static bool loose = false;
+
     public Image healthbar;
 
     void Start()
@@ -111,6 +113,14 @@ public class Enemy : MonoBehaviour
             var data = reader.ReadToEnd();
 
             Debug.Log("STATUS_SERVEUR" + data);
+
+            //make UI of loose appear
+            //GameObject.Find("Loose").GetComponent<Loose>().TogglePause();
+
+            loose = true;
+
+            //load scene 5
+            PhotonNetwork.LoadLevel(5);
         }
     }
 
