@@ -26,9 +26,25 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bool win2 = WaveSpawner.win;
+
+        bool loose2 = Enemy.loose;
+
         bool pause = Input.GetKeyDown(KeyCode.Escape);
 
-        if(pause)
+        //if (win2)
+        //{
+        //    GameObject.Find("Win").GetComponent<Pause>().ToggleWin();
+        //
+        //}
+
+        //if (loose2)
+        //{
+        //    GameObject.Find("Loose").GetComponent<Pause>().ToggleLoose();
+        //
+        //}
+
+        if (pause)
         {
             GameObject.Find("Pause").GetComponent<Pause>().TogglePause();
             
@@ -37,7 +53,7 @@ public class CameraController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.P))
         {
             doMovement = !doMovement;
-        }  
+        }
 
 
         if (!doMovement)

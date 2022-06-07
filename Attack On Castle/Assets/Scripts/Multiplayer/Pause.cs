@@ -31,6 +31,17 @@ public class Pause : MonoBehaviour
         Application.Quit();
     }
 
+
+    //public void ToggleWin()
+    //{
+        //transform.GetChild(0).gameObject.SetActive(WaveSpawner.win);
+    //}
+
+    //public void ToggleLoose()
+    //{
+    //    transform.GetChild(0).gameObject.SetActive(Enemy.loose);
+    //}
+
     private void Update()
     {
         
