@@ -16,6 +16,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TimerText.text = Survival.Timertxt;
+        
+        TimerText.text = Survival.Timertxt != "" ? Survival.Timertxt : WaveSpawner.Timertxt;
     }
 }
