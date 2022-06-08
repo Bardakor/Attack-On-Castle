@@ -18,6 +18,12 @@ public class WaveSpawner : MonoBehaviour
 
     public static bool win = false;
 
+    public static float TimeElapsed = 0f;
+    public static int minutes = Mathf.FloorToInt(TimeElapsed / 60F);
+    public static int seconds = Mathf.FloorToInt(TimeElapsed - minutes * 60);
+
+    public static string Timertxt = $"";
+
 
 
 
@@ -53,6 +59,11 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        TimeElapsed += Time.deltaTime;
+        minutes = Mathf.FloorToInt(TimeElapsed / 60F);
+        seconds = Mathf.FloorToInt(TimeElapsed - minutes * 60);
+        Timertxt = string.Format("{0:0}:{1:00}", minutes, seconds);
+
         if (win || Enemy.loose)
             return;
         if (EnemiesAlive > 0)
@@ -69,9 +80,12 @@ public class WaveSpawner : MonoBehaviour
         
         if (waveIndex == waves.Length && EnemiesAlive == 0)
         {
+            PhotonNetwork.LoadLevel(5);
             Debug.Log("End of the level");
             this.enabled = false;
-            var url = "http://projects.armandblin.com:8080/win/" + PhotonNetwork.NickName+"_"+Survival.minutes.ToString();
+            var url = "http://projects.armandblin.com:8080/win/" + PhotonNetwork.NickName+"_" + Timertxt;
+
+            Debug.Log(Timertxt);
 
             var request = WebRequest.Create(url);
             request.Method = "GET";
@@ -89,7 +103,7 @@ public class WaveSpawner : MonoBehaviour
 
             win = true;
             //load scene 4
-            PhotonNetwork.LoadLevel(5);
+            
         }
     }
 
