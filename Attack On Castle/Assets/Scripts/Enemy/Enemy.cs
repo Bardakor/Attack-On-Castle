@@ -101,7 +101,7 @@ public class Enemy : MonoBehaviour
         if(PlayerStat.life <= 0)
         {
             Debug.Log("You loose");
-            var url = "http://192.168.1.48:8080/lost/" + PhotonNetwork.NickName;
+            var url = "http://projects.armandblin.com:8080/lost/" + PhotonNetwork.NickName;
 
             var request = WebRequest.Create(url);
             request.Method = "GET";
