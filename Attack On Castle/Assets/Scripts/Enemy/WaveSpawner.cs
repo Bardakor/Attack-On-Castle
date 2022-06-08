@@ -71,7 +71,7 @@ public class WaveSpawner : MonoBehaviour
         {
             Debug.Log("End of the level");
             this.enabled = false;
-            var url = "http://projects.armandblin.com:8080/win/" + PhotonNetwork.NickName+"_"+Survival.seconds.ToString();
+            var url = "http://projects.armandblin.com:8080/win/" + PhotonNetwork.NickName+"_"+Survival.minutes.ToString();
 
             var request = WebRequest.Create(url);
             request.Method = "GET";
