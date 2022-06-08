@@ -14111,7 +14111,7 @@ MonoBehaviour:
     rate: 1
     spawnPoint: {fileID: 892587794}
   - enemy: {fileID: 7964375817453170060, guid: 4077c14a264a5f14b8d66749500af8bd, type: 3}
-    count: 2
+    count: 1
     rate: 1
     spawnPoint: {fileID: 892587794}
   waves2: []

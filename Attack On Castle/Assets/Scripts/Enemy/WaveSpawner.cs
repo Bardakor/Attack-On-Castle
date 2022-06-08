@@ -53,10 +53,12 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (win || Enemy.loose)
+            return;
         if (EnemiesAlive > 0)
             return;
 
-        if (countdown <= 0f)
+        if (countdown <= 0f && waveIndex != waves.Length)
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
@@ -64,27 +66,8 @@ public class WaveSpawner : MonoBehaviour
         }
 
         countdown -= Time.deltaTime;
-    }
-
-    IEnumerator SpawnWave()
-    {
-        foreach (Wave[] waves in Waves)
-        {
-
-            Wave wave = waves[waveIndex];
-
-            for (int i = 0; i < wave.count; i++)
-            {
-                SpawnEnemy(wave.enemy, wave);
-                yield return new WaitForSeconds(1f / wave.rate);
-            }
-
-            
-
-            
-        }
-        waveIndex++;
-        if (waveIndex == waves.Length)
+        
+        if (waveIndex == waves.Length && EnemiesAlive == 0)
         {
             Debug.Log("End of the level");
             this.enabled = false;
@@ -100,15 +83,31 @@ public class WaveSpawner : MonoBehaviour
             var data = reader.ReadToEnd();
 
             Debug.Log("STATUS_SERVEUR" + data);
-
+            
             //make UI of win appear
             //GameObject.Find("Win").GetComponent<Win>().TogglePause();
 
             win = true;
             //load scene 4
-            PhotonNetwork.LoadLevel("4");
+            PhotonNetwork.LoadLevel(5);
         }
+    }
 
+    IEnumerator SpawnWave()
+    {
+        foreach (Wave[] waves in Waves)
+        {
+
+            Wave wave = waves[waveIndex];
+
+            for (int i = 0; i < wave.count; i++)
+            {
+                SpawnEnemy(wave.enemy, wave);
+                yield return new WaitForSeconds(1f / wave.rate);
+            }
+        }
+        
+        waveIndex++;
     }
 
 
