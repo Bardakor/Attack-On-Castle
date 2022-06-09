@@ -23290,20 +23290,20 @@ MonoBehaviour:
     rate: 1
     spawnPoint: {fileID: 2004591099}
   - enemy: {fileID: 7423846376491053643, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
-    count: 1
+    count: 4
     rate: 1
     spawnPoint: {fileID: 2004591099}
   - enemy: {fileID: 7964375817453170060, guid: 4077c14a264a5f14b8d66749500af8bd, type: 3}
-    count: 3
+    count: 1
     rate: 1
     spawnPoint: {fileID: 2004591099}
   waves2:
   - enemy: {fileID: 6240322714575630876, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
-    count: 3
+    count: 0
     rate: 1
     spawnPoint: {fileID: 951342625}
   - enemy: {fileID: 7964375817453170060, guid: 4077c14a264a5f14b8d66749500af8bd, type: 3}
-    count: 2
+    count: 1
     rate: 1
     spawnPoint: {fileID: 951342625}
   - enemy: {fileID: 7423846376491053643, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
@@ -23312,15 +23312,15 @@ MonoBehaviour:
     spawnPoint: {fileID: 951342625}
   waves3:
   - enemy: {fileID: 7423846376491053643, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
-    count: 1
-    rate: 1
-    spawnPoint: {fileID: 765111193}
-  - enemy: {fileID: 7964375817453170060, guid: 4077c14a264a5f14b8d66749500af8bd, type: 3}
-    count: 5
+    count: 0
     rate: 1
     spawnPoint: {fileID: 765111193}
   - enemy: {fileID: 6240322714575630876, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
     count: 3
+    rate: 1
+    spawnPoint: {fileID: 765111193}
+  - enemy: {fileID: 6240322714575630876, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
+    count: 5
     rate: 1
     spawnPoint: {fileID: 765111193}
   timeBetweenWaves: 5

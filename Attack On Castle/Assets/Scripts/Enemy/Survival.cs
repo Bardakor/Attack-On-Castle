@@ -5,7 +5,7 @@ using UnityEngine;
 public class Survival : MonoBehaviour
 {
     public static int EnemiesAlive = 0;
-    public static int Round = 0;
+    public static int Round = 8;
     public static int maxWaves = 2;
 
 
@@ -13,7 +13,7 @@ public class Survival : MonoBehaviour
     public static string Timertxt = $"";
 
 
-    public static float TimeElapsed = 0f;
+    public static float TimeElapsed = 300f;
     public static int minutes = Mathf.FloorToInt(Survival.TimeElapsed / 60F);
     public static int seconds = Mathf.FloorToInt(Survival.TimeElapsed - minutes * 60);
 

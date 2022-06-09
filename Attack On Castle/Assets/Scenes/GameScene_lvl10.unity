@@ -23271,7 +23271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9eacc31e0677e34db7120b1e53badd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 1000
+  startMoney: 200
 --- !u!114 &1005106554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23285,25 +23285,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
+  - enemy: {fileID: 7423846376491053643, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
+    count: 4
+    rate: 1
+    spawnPoint: {fileID: 2004591099}
   - enemy: {fileID: -692220718697132820, guid: 60a516d7b8bfd714b917bd2817fad388, type: 3}
     count: 1
     rate: 1
     spawnPoint: {fileID: 2004591099}
+  - enemy: {fileID: 6240322714575630876, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
+    count: 6
+    rate: 1
+    spawnPoint: {fileID: 2004591099}
   - enemy: {fileID: 7423846376491053643, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
-    count: 1
+    count: 5
+    rate: 1
+    spawnPoint: {fileID: 2004591099}
+  - enemy: {fileID: 6240322714575630876, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
+    count: 4
     rate: 1
     spawnPoint: {fileID: 2004591099}
   - enemy: {fileID: 7964375817453170060, guid: 4077c14a264a5f14b8d66749500af8bd, type: 3}
     count: 3
-    rate: 1
+    rate: 0.5
     spawnPoint: {fileID: 2004591099}
   waves2:
   - enemy: {fileID: 6240322714575630876, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
-    count: 3
+    count: 0
+    rate: 1
+    spawnPoint: {fileID: 951342625}
+  - enemy: {fileID: 6240322714575630876, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
+    count: 2
+    rate: 1
+    spawnPoint: {fileID: 951342625}
+  - enemy: {fileID: 7423846376491053643, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
+    count: 4
     rate: 1
     spawnPoint: {fileID: 951342625}
   - enemy: {fileID: 7964375817453170060, guid: 4077c14a264a5f14b8d66749500af8bd, type: 3}
-    count: 2
+    count: 1
+    rate: 1
+    spawnPoint: {fileID: 951342625}
+  - enemy: {fileID: 6240322714575630876, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
+    count: 3
     rate: 1
     spawnPoint: {fileID: 951342625}
   - enemy: {fileID: 7423846376491053643, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
@@ -23312,18 +23336,30 @@ MonoBehaviour:
     spawnPoint: {fileID: 951342625}
   waves3:
   - enemy: {fileID: 7423846376491053643, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
-    count: 1
+    count: 0
+    rate: 1
+    spawnPoint: {fileID: 765111193}
+  - enemy: {fileID: 7423846376491053643, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
+    count: 5
     rate: 1
     spawnPoint: {fileID: 765111193}
   - enemy: {fileID: 7964375817453170060, guid: 4077c14a264a5f14b8d66749500af8bd, type: 3}
-    count: 5
+    count: 2
+    rate: 1
+    spawnPoint: {fileID: 765111193}
+  - enemy: {fileID: 7423846376491053643, guid: 5488fd1dd159080428cd6e6466218533, type: 3}
+    count: 3
     rate: 1
     spawnPoint: {fileID: 765111193}
   - enemy: {fileID: 6240322714575630876, guid: a22ae188c73ee1b4ab3736503e6a2506, type: 3}
     count: 3
     rate: 1
     spawnPoint: {fileID: 765111193}
-  timeBetweenWaves: 5
+  - enemy: {fileID: 7964375817453170060, guid: 4077c14a264a5f14b8d66749500af8bd, type: 3}
+    count: 2
+    rate: 1
+    spawnPoint: {fileID: 765111193}
+  timeBetweenWaves: 3
   countdown: 2
 --- !u!4 &1005106555
 Transform:
