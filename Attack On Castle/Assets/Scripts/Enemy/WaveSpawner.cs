@@ -80,7 +80,7 @@ public class WaveSpawner : MonoBehaviour
         
         if (waveIndex == waves.Length && EnemiesAlive == 0)
         {
-            PhotonNetwork.LoadLevel(5);
+            PhotonNetwork.LoadLevel(12);
             Debug.Log("End of the level");
             this.enabled = false;
             var url = "http://projects.armandblin.com:8080/win/" + PhotonNetwork.NickName+"_" + Timertxt;

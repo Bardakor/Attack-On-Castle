@@ -120,7 +120,7 @@ public class Enemy : MonoBehaviour
             loose = true;
 
             //load scene 5
-            PhotonNetwork.LoadLevel(6);
+            PhotonNetwork.LoadLevel(13);
         }
     }
 
