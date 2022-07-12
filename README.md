@@ -30,3 +30,5 @@ We wanted to try to build a Tower Defense game inspired by LoL (for the camera),
 
 Enjoy, <br>
 The Attack on Castle Team.
+
+It was a great dive into team development, and I hope you will enjoy it as much as I did. Thanks for your attention. Liam
